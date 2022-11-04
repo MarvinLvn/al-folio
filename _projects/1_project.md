@@ -1,80 +1,85 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: "Brouhaha: multi-task training for voice activity detection, speech-to-noise ratio, and C50 room acoustics estimation (2023)"
+img: assets/img/brouhaha/brouhaha.png
 importance: 1
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/brouhaha/brouhaha.png" title="Brouhaha predictions" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="caption"><i>Brouhaha</i> predicts: 1) speech/non-speech segments; 2) Speech-to-Noise Ratio; 3) and C50 room acoustic measure.
+</div>
+
+## Training time
+
+In this project, we contaminated read-speech audio samples (retrieved from LibriSpeech) with noise and reverberation.
+
+The noise level is measured with the signal-to-noise ratio (**SNR**): the lower the SNR, the noisier the resulting audio. Similarly, the  reverberation level is measured with **C50**: the lower the C50, the more reverberated the resulting audio.
+
+Here are some contaminated audio samples used to train *Brouhaha*:
+
+
+
+
+<table class="doubletable">
+    <tr>
+        <td class="first"></td><th>Low SNR</th><th>High SNR</th>
+    </tr>
+    <tr>
+        <th>Low C50</th>
+        <td>
+            <audio controls src="/assets/audio/brouhaha/c50_9_7_snr_5.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="/assets/audio/brouhaha/c50_7_5_snr_25.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+        <th>High C50</th>
+        <td>
+            <audio controls src="/assets/audio/brouhaha/c50_40_snr_5.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="/assets/audio/brouhaha/c50_32_snr_25.wav"></audio>
+        </td>
+    </tr>
+</table>
+
+## Inference time
+
+I recorded myself with an Olympus VN-540PC in three locations: 1) my place; 2) the front of the beautiful [church of Notre-Dame Dijon](https://en.wikipedia.org/wiki/Church_of_Notre-Dame_of_Dijon) (semi-enclosed space); 3) inside the same church.
+Here's what Brouhaha C50 prediction looks like as a function of time:
+
+<table>
+<tr>
+<td>
+    Home:
+    <audio controls src="/assets/audio/brouhaha/home.wav"></audio>
+</td>
+<td rowspan="3"> 
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/brouhaha/brouhaha_test_c50.png" title="Brouhaha C50 test" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+</td>
+</tr>
+<tr>
+<td>
+    Church front:
+    <audio controls src="/assets/audio/brouhaha/parvis_eglise.wav"></audio>
+</td>
+</tr>
+<tr>
+<td>
+    Church:
+    <audio controls src="/assets/audio/brouhaha/eglise.wav"></audio>
+</td>
+</tr>
+</table>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+Predicted C50 in the semi-enclosed space (Church front) or the closed space (Home) are around 57 dB.
+*Brouhaha* predicts a lower C50 (more reverberation) for the audio sample recorded within the church (35 dB). 
 
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}

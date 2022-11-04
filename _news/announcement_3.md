@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2022-Sept
 inline: true
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+**[🇩🇪 SEMINAR]** I'm participating to the [Developmental Machine Learning: From Human Learning to Machines and Back](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=22422) seminar. See you in Dagstuhl!

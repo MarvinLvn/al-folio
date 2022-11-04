@@ -1,25 +1,26 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://research.facebook.com/'>Meta AI</a>, <a href='https://lscp.dec.ens.fr/en'>Ecole Normale Supérieure</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: picture.jpg
+  image_circular: true # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Centre Sciences des Données</p>
+    <p>45 rue d'Ulm</p>
+    <p>75005, Paris, France</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a PhD student under the supervision of Alejandrina Cristia, Hervé Bredin and Emmanuel Dupoux.
+I work between [Meta AI](https://research.facebook.com/) and the [Cognitive Machine Learning](http://www.lscp.net/persons/dupoux/bootphon/index.html) and [Language Acquisition Across Cultures](https://lscp.dec.ens.fr/en/research/teams-lscp/language-acquisition-across-cultures) teams of the [LSCP](https://lscp.dec.ens.fr/en).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My work is at the intersection of **Artificial Intelligence** and **Cognitive Sciences**. My research focuses on **language acquisition modelling** and **speech processing** applications to the study of language development in general.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Broad research questions include: How can we build machines that learn to perceive language? How can we better compare humans and machines in language-perceptual tasks? What makes infants so efficient at learning language?
