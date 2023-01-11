@@ -21,24 +21,66 @@ Below, you'll find some audio samples that the model is exposed to during traini
 Audio samples extracted from child-centered long-form recordings:
 
 <table>
-    <th>
-        <figure>
-            <figcaption>Listen to the T-Rex:</figcaption>
-            <audio
-                controls
-                src="/assets/audio/struggle/daylong1.wav">
-            </audio>
-        </figure>
-    </th>
-    <th>
-        <figure>
-            <figcaption>Belly:</figcaption>
-            <audio
-                controls
-                src="/assets/audio/struggle/daylong2.wav">
-            </audio>
-        </figure>
-    </th>
+    <tr>    
+        <th>
+            <figure>
+                <figcaption>Female speech (storytelling):</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/struggle/daylong_fem_story.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>Male speech (storytelling):</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/struggle/daylong_mal_story.wav">
+                </audio>
+            </figure>
+        </th>
+    </tr>
+    <tr>    
+        <th>
+            <figure>
+                <figcaption>Female speech (with cries):</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/struggle/daylong_fem_cries.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>Male speech (in the car):</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/struggle/daylong_mal_car.wav">
+                </audio>
+            </figure>
+        </th>
+    </tr>
+    <tr>    
+        <th>
+            <figure>
+                <figcaption>Female speech (conversation):</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/struggle/daylong_fem_farfield.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>Male speech (conversation):</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/struggle/daylong_very_farfield.wav">
+                </audio>
+            </figure>
+        </th>
+    </tr>
 </table>
 
 ### Audiobooks
@@ -48,7 +90,7 @@ Audio samples extracted from audiobooks:
 <table>
     <th>
         <figure>
-            <figcaption>Bright was the day:</figcaption>
+            <figcaption>Female speech (reading):</figcaption>
             <audio
                 controls
                 src="/assets/audio/struggle/audiobooks1.wav">
@@ -57,7 +99,7 @@ Audio samples extracted from audiobooks:
     </th>
     <th>
         <figure>
-            <figcaption>A such mischance:</figcaption>
+            <figcaption>Female speech (reading):</figcaption>
             <audio
                 controls
                 src="/assets/audio/struggle/audiobooks2.wav">
@@ -73,7 +115,7 @@ The same audio samples contaminated with additive noise and reverberation to sim
 <table>
     <th>
         <figure>
-            <figcaption>Bright was the day (noise + reverb):</figcaption>
+            <figcaption>Contaminated female speech (reading):</figcaption>
             <audio
                 controls
                 src="/assets/audio/struggle/simulated_longforms1.wav">
@@ -82,7 +124,7 @@ The same audio samples contaminated with additive noise and reverberation to sim
     </th>
     <th>
         <figure>
-            <figcaption>A such mischance (noise + reverb):</figcaption>
+            <figcaption>Contaminated female speech (reading):</figcaption>
             <audio
                 controls
                 src="/assets/audio/struggle/simulated_longforms2.wav">
