@@ -1,80 +1,141 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-importance: 3
-category: fun
+title: "BabySLM: language-acquisition-friendly benchmark of self-supervised spoken language models (2023)"
+img: assets/img/babyslm/babyslm_logo.png
+importance: 1
+category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/babyslm/babyslm_logo.png" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+This work aims at making language models more relevant to model language acquisition in infants. 
+
+In particular, we advocate that language models should be: 
+1. trained on developmentally plausible corpora. 
+2. evaluated on appropriate benchmarks.
+
+To this end, we propose a language-acquisition-friendly benchmark to evaluate written or spoken language models at the lexical and syntactic levels. 
+
+Examples of audio files used in our benchmark are available on this webpage.
+
+### Spot-the-word task
+
+In this task, the model receives a word (✓) and a pseudo-word (✗) matched in phonotactic probabilities.
+
+The model gets a score of 1 if it successfully assigns a higher probability to the real word than to the pseudo-word. It obtains a score of 0 otherwise.
+
+<table>
+    <tr>    
+        <th>
+            <figure>
+                <figcaption>✓ hello</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/babyslm/lexical/G_hello-en-US-Wavenet-I.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>✗ lello</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/babyslm/lexical/B_hello1-en-US-Wavenet-I.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>✗ pello</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/babyslm/lexical/B_hello2-en-US-Wavenet-I.wav">
+                </audio>
+            </figure>
+        </th>
+    </tr>
+    <tr>    
+        <th>
+            <figure>
+                <figcaption>✓ cookie</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/babyslm/lexical/G_cookie-en-US-Wavenet-I.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>✗ cootie</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/babyslm/lexical/B_cookie1-en-US-Wavenet-I.wav">
+                </audio>
+            </figure>
+        </th>
+        <th>
+            <figure>
+                <figcaption>✗ boodie</figcaption>
+                <audio
+                    controls
+                    src="/assets/audio/babyslm/lexical/B_cookie2-en-US-Wavenet-I.wav">
+                </audio>
+            </figure>
+        </th>
+    </tr>
+</table>
+
+### Grammatical acceptability judgment task
+
+In this task, the model receives a grammatical (✓) and an ungrammatical (✗) sentence.
+
+The model gets a score of 1 if it successfully assigns a higher probability to the grammatical sentence than to the ungrammatical one. It obtains a score of 0 otherwise.
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+<table>
+<tr>
+    <th>
+        <figure>
+            <figcaption>✓ The angry dragon</figcaption>
+            <audio
+                controls
+                src="/assets/audio/babyslm/syntactic/GR_The_angry_dragon.wav">
+            </audio>
+        </figure>
+    </th>
+    <th>
+        <figure>
+            <figcaption>✗ The dragon angry</figcaption>
+            <audio
+                controls
+                src="/assets/audio/babyslm/syntactic/UNGR_The_dragon_angry.wav">
+            </audio>
+        </figure>
+    </th>
+</tr>
+<tr>
+    <th>
+        <figure>
+            <figcaption>✓ The prince needs the princess</figcaption>
+            <audio
+                controls
+                src="/assets/audio/babyslm/syntactic/GR_The_prince_needs_the_princess.wav">
+            </audio>
+        </figure>
+    </th>
+    <th>
+        <figure>
+            <figcaption>✗ The prince need the princess</figcaption>
+            <audio
+                controls
+                src="/assets/audio/babyslm/syntactic/UNGR_The_prince_need_the_princess.wav">
+            </audio>
+        </figure>
+    </th>
+</tr>
+</table>
 
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
