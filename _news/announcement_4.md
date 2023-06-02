@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-August
+date: 2022,August
 inline: true
 ---
 

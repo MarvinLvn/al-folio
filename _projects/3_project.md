@@ -130,9 +130,8 @@ The model gets a score of 1 if it successfully assigns a higher probability to t
     <th>
         <figure>
             <figcaption>✗ The prince need the princess</figcaption>
-            <audio
-                controls
-                src="/assets/audio/babyslm/syntactic/UNGR_The_prince_need_the_princess.wav">
+            <audio controls>
+                <source src="/assets/audio/babyslm/syntactic/UNGR_The_prince_need_the_princess.wav" type="audio/wav">
             </audio>
         </figure>
     </th>
