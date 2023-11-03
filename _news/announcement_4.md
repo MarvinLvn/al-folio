@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022,August
+date: 2023,May
 inline: true
 ---
 
-**[🇫🇮 VISIT]** Two-week visit in Okko Räsänen's [lab](https://webpages.tuni.fi/specog/index.html), Tampere, Finland! 
+**[📝 PAPER]** [BabySLM](https://x.com/LavechinMarvin/status/1665771123999473666?s=20) has been accepted at Interspeech 2023!

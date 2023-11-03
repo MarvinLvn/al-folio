@@ -1,10 +1,21 @@
 ---
 ---
+@article{lavechin2023babyslm,
+  title={BabySLM: language-acquisition-friendly benchmark of self-supervised spoken language models},
+  author={Lavechin, Marvin and Sy, Yaya and Titeux, Hadrien and Bland{\'o}n, Mar{\'\i}a Andrea Cruz and R{\"a}s{\"a}nen, Okko and Bredin, Herv{\'e} and Dupoux, Emmanuel and Cristia, Alejandrina},
+  journal={Interspeech},
+  year={2023},
+  selected={true},
+  abstract={Self-supervised techniques for learning speech representations have been shown to develop linguistic competence from exposure to speech without the need for human labels. In order to fully realize the potential of these approaches and further our understanding of how infants learn language, simulations must closely emulate real-life situations by training on developmentally plausible corpora and benchmarking against appropriate test sets. To this end, we propose a language-acquisition-friendly benchmark to probe spoken language models at the lexical and syntactic levels, both of which are compatible with the vocabulary typical of children's language experiences. This paper introduces the benchmark and summarizes a range of experiments showing its usefulness. In addition, we highlight two exciting challenges that need to be addressed for further progress: bridging the gap between text and speech and between clean speech and in-the-wild speech.},
+  pdf={https://arxiv.org/abs/2306.01506},
+  code={https://github.com/MarvinLvn/BabySLM},
+  blog={https://x.com/LavechinMarvin/status/1665771123999473666?s=20}
+}
 
 @article{brouhaha,
   title={Brouhaha: multi-task training for voice activity detection, speech-to-noise ratio, and C50 room acoustics estimation},
   author={Lavechin, Marvin and M{\'e}tais, Marianne and Titeux, Hadrien and Boissonnet, Alodie and Copet, Jade and Rivi{\`e}re, Morgane and Bergelson, Elika and Cristia, Alejandrina and Dupoux, Emmanuel and Bredin, Herv{\'e}},
-  journal={Submission to ICASSP},
+  journal={ASRU},
   year={2023},
   selected={true},
   abstract={Most automatic speech processing systems are sensitive to the acoustic environment, with degraded performance when applied to noisy or reverberant speech. But how can one tell whether speech is noisy or reverberant? We propose Brouhaha, a pipeline to simulate audio segments recorded in noisy and reverberant conditions. We then use the simulated audio to jointly train the Brouhaha model for voice activity detection, signal-to-noise ratio estimation, and C50 room acoustics prediction. We show how the predicted SNR and C50 values can be used to investigate and help diagnose errors made by automatic speech processing tools (such as pyannote.audio for speaker diarization or OpenAI's Whisper for automatic speech recognition). Both our pipeline and a pretrained model are open source and shared with the speech community.},
@@ -46,6 +57,37 @@
   pdf={https://arxiv.org/abs/2005.12656},
   code={https://github.com/MarvinLvn/voice-type-classifier},
 }
+
+@article{de2023realistic,
+  title={Realistic and broad-scope learning simulations: first results and challenges},
+  author={de Seyssel, Maureen and Lavechin, Marvin and Dupoux, Emmanuel},
+  journal={Journal of Child Language},
+  pages={1--24},
+  year={2023},
+  publisher={Cambridge University Press},
+  abstract={There is a current 'theory crisis' in language acquisition research, resulting from fragmentation both at the level of the approaches and the linguistic level studied. We identify a need for integrative approaches that go beyond these limitations, and propose to analyse the strengths and weaknesses of current theoretical approaches of language acquisition. In particular, we advocate that language learning simulations, if they integrate realistic input and multiple levels of language, have the potential to contribute significantly to our understanding of language acquisition. We then review recent results obtained through such language learning simulations. Finally, we propose some guidelines for the community to build better simulations.},
+  pdf={https://www.cambridge.org/core/journals/journal-of-child-language/article/realistic-and-broadscope-learning-simulations-first-results-and-challenges/839CAA7B0E6F34462AE82F752636CD6F}
+}
+
+@article{lavechin2022can,
+  title={Can statistical learning bootstrap early language acquisition? A modeling investigation},
+  author={Lavechin, Marvin and De Seyssel, Maureen and Titeux, Hadrien and Bredin, Herv{\'e} and Wisniewski, Guillaume and Cristia, Alejandrina and Dupoux, Emmanuel},
+  year={2023},
+  publisher={Submitted to Developmental Science},
+  abstract={Before they even produce their first word, infants start developing a language-specific perception, recognize the auditory form of frequent words, and develop a rudimentary knowledge of grammatical categories. A major question in language development is: what mechanisms are responsible for the effortless learning infants demonstrate? In-laboratory experiments have shown that young infants are exquisitely sensitive to fine-grained statistical regularities of their speech input. This has led researchers to propose statistical learning as the cornerstone mechanism of early language acquisition. While the statistical learning account has been influential, the extent to which it can explain early language acquisition is still controversial. Recent computational studies provide evidence in favour of the statistical learning hypothesis for sound learning, but can this result be extended to higher level linguistic categories? Here, we introduce STELA, a developmental and psycholinguistic-inspired computational model that simulates how infants might learn at multiple linguistic levels simultaneously based on statistical analysis of raw audio signals.  Our algorithm uses only the raw input without any human annotation, and it is trained to predict future segments of speech based on past ones. It reproduces the pattern of parallel learning across sound and word levels reported in infants: it learns to discriminate sounds, recognizes the auditory form of words, and organizes sounds and words along linguistic dimensions. This suggests that statistical learning from raw speech is sufficient to bootstrap early language acquisition at the sound and word levels.},
+  pdf={https://osf.io/preprints/psyarxiv/rx94d/}
+}
+
+
+@article{de2023prosaudit,
+  title={ProsAudit, a prosodic benchmark for self-supervised speech models},
+  author={de Seyssel, Maureen and Lavechin, Marvin and Titeux, Hadrien and Thomas, Arthur and Virlet, Gwendal and Revilla, Andrea Santos and Wisniewski, Guillaume and Ludusan, Bogdan and Dupoux, Emmanuel},
+  journal={Interspeech},
+  year={2023},
+  abstract={We present ProsAudit, a benchmark in English to assess structural prosodic knowledge in self-supervised learning (SSL) speech models. It consists of two subtasks, their corresponding metrics, and an evaluation dataset. In the protosyntax task, the model must correctly identify strong versus weak prosodic boundaries. In the lexical task, the model needs to correctly distinguish between pauses inserted between words and within words. We also provide human evaluation scores on this benchmark. We evaluated a series of SSL models and found that they were all able to perform above chance on both tasks, even when evaluated on an unseen language. However, non-native models performed significantly worse than native ones on the lexical task, highlighting the importance of lexical knowledge in this task. We also found a clear effect of size with models trained on more data performing better in the two subtasks.},
+  pdf={https://arxiv.org/abs/2302.12057}
+}
+
 
 @inproceedings{bredin2020pyannote,
   title={Pyannote.audio: neural building blocks for speaker diarization},

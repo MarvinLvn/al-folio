@@ -18,9 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a PhD student under the supervision of Alejandrina Cristia, Hervé Bredin and Emmanuel Dupoux.
-I work between [Meta AI](https://research.facebook.com/) and the [Cognitive Machine Learning](http://www.lscp.net/persons/dupoux/bootphon/index.html) and [Language Acquisition Across Cultures](https://lscp.dec.ens.fr/en/research/teams-lscp/language-acquisition-across-cultures) teams of the [LSCP](https://lscp.dec.ens.fr/en).
+I am currently a postdoctoral researcher in the GIPSA laboratory (Grenoble, France) under the supervision of Thomas Hueber in the [CRISSP team](https://www.gipsa-lab.grenoble-inp.fr/en/team/crissp).
+Formerly, at [Meta AI](https://research.facebook.com/) and the [Cognitive Machine Learning](http://www.lscp.net/persons/dupoux/bootphon/index.html) and [Language Acquisition Across Cultures](https://lscp.dec.ens.fr/en/research/teams-lscp/language-acquisition-across-cultures) teams of the [LSCP](https://lscp.dec.ens.fr/en).
 
 My work is at the intersection of **Artificial Intelligence** and **Cognitive Sciences**. My research focuses on **language acquisition modeling** and **speech processing** applications to the study of language development in general.
 
-Broad research questions include: How can we build machines that learn to perceive language? How can we better compare humans and machines in language-perceptual tasks? What makes infants so efficient at learning language?
+Broad research questions include: How can we build machines that learn to produce and comprehend language? How can we better compare humans and machines in language-perceptual tasks? What makes infants so efficient at learning language?

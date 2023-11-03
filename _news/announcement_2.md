@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022,Mar
+date: 2023, Sep
 inline: true
 ---
 
-**[🤖 SEMINAR]** Kick-off meeting of the Benchmarking speech acquisition in humans & machines online seminar (click [here](https://docs.google.com/document/d/1HpCP6syeTIuC_DkpPKlNmpm0vX6LYm-GgzkAEuY9Fjk/edit?usp=sharing) to join us!)
+**[🎓 Ph.D. defense]** Successfully defended [my thesis](https://osf.io/preprints/psyarxiv/5p8ge/) on September, 2023! Yay!
